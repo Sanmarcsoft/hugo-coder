@@ -4,6 +4,7 @@ theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
 enableEmoji = true
+contentDir = "content"
 
 [pagination]
 pagerSize = 6
@@ -43,7 +44,7 @@ maxSeeAlsoItems = 5
 # Custom CSS
 customCSS = []
 # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
-customSCSS = []
+customSCSS = ["scss/custom.scss"]
 
 # Custom JS
 customJS = []
@@ -153,11 +154,13 @@ url = "https://www.linkedin.com/in/thematthewstevens/"
 
 [languages.en]
 languageName = ":uk:"
+contentDir = "content/en"
+weight = 1
 
 [[languages.en.menu.main]]
-name = "About"
+name = "Home"
 weight = 1
-url = "about/"
+url = "/" # Point to the site root (homepage)
 
 [[languages.en.menu.main]]
 name = "Blog"
@@ -165,15 +168,12 @@ weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "About"
 weight = 3
-url = "projects/"
+url = "about/"
 
 [[languages.en.menu.main]]
-name = "Contact me"
-weight = 5
-url = "contact/"
-
-
-
+name = "Projects"
+weight = 4
+url = "projects/"
 
